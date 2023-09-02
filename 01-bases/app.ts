@@ -1,3 +1,5 @@
+(()=> {
+
 type Movil = {
   carroceria:string,
   modelo:string,
@@ -23,7 +25,6 @@ const bumblebee: Movil = {
     console.log("Disparando");
   }
 };
-
 
 // Villanos debe de ser un arreglo de objetos personalizados
 type Villano = {
@@ -67,6 +68,8 @@ const apocalipsis:Apocalipsis = {
 
 // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
 let mystique:Charles| Apocalipsis;
+console.log( apocalipsis );
 
 mystique = charles;
 mystique = apocalipsis;
+})()
