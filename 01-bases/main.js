@@ -50,7 +50,8 @@
 })();
 (() => {
     let addNumbersFunction = (a, b) => {
-        return 10;
+        return a * b;
     };
+    console.log(addNumbersFunction(4, 5));
 })();
 //# sourceMappingURL=main.js.map

@@ -1,12 +1,12 @@
 (()=>{
     interface addTwonNumber {
-        (a:number, b:number):number
+        (a:number, b:number):void
     }
 
 
     let addNumbersFunction:addTwonNumber = ( a:number, b:number ) => {
-        return 10;
+        return a*b;
     }
 
-
+    console.log( addNumbersFunction(4,5) );
 })()
