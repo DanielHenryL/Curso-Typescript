@@ -1,4 +1,5 @@
 (()=>{
+    // son clases que son las base de otras clases, y puede ser extendida a estas.
     abstract class Mutante{
         constructor( public name:string, public realName:string ){
             
@@ -17,7 +18,7 @@
         }
     }
 
-    const wolveri = new Xmen('Wolveri','Logan');
+    // const wolveri = new Xmen('Wolveri','Logan');
     const magneto = new Villian('Magneto','Magnus');
     // console.log( wolveri.salvarMundo() );
     // console.log( magneto.conquistarMundo() );
@@ -26,5 +27,5 @@
         console.log( character.name );
     }
 
-    prinName( wolveri );
+    // prinName( wolveri );
 })()

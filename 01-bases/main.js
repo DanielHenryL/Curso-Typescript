@@ -16,12 +16,10 @@
             return 'Mundo conquistado';
         }
     }
-    const wolveri = new Xmen('Wolveri', 'Logan');
     const magneto = new Villian('Magneto', 'Magnus');
     const prinName = (character) => {
         console.log(character.name);
     };
-    prinName(wolveri);
 })();
 (() => {
     class Avenger {
@@ -70,5 +68,26 @@
             console.log(super.getFullname());
         }
     }
+})();
+(() => {
+    class Apocalipsis {
+        constructor(name) {
+            this.name = name;
+        }
+        static callApocalipsis() {
+            if (!Apocalipsis.instance) {
+                Apocalipsis.instance = new Apocalipsis('Soy apocalipsis el unico');
+            }
+            return Apocalipsis.instance;
+        }
+        set Name(name) {
+            this.name = name;
+        }
+    }
+    const apocalipsis1 = Apocalipsis.callApocalipsis();
+    const apocalipsis2 = Apocalipsis.callApocalipsis();
+    const apocalipsis3 = Apocalipsis.callApocalipsis();
+    apocalipsis1.Name = 'soy yo';
+    console.log(apocalipsis1, apocalipsis2, apocalipsis3);
 })();
 //# sourceMappingURL=main.js.map
