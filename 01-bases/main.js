@@ -23,6 +23,9 @@
             id: 12334,
             city: 'lima',
             zip: 'adasdsa'
+        },
+        getFullAddress() {
+            return this.address.city;
         }
     };
     const client2 = {
@@ -32,6 +35,9 @@
             id: 98765,
             city: 'junin',
             zip: 'gagaga'
+        },
+        getFullAddress() {
+            return this.address.city;
         }
     };
 })();
