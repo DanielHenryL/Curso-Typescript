@@ -1,11 +1,9 @@
-import * as h from "./classes/Hero";
-import powers, { Power } from "./data/powers";
-// esportacion con alias
-
-const heroe = new h.Hero('daniel',2,26);
-
-console.log( heroe );
-console.log( heroe.power );
-// console.log( heroe );
+import { getPokemon } from "./generics/get-pokemon";
 
 
+
+getPokemon(4)
+    .then( pokemon => console.log( pokemon.sprites.front_default ))
+    .catch( error => console.log( error ))
+    .finally( () => console.log( 'Fin de getPokemon' ))
+    
