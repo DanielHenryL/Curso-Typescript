@@ -27,14 +27,36 @@ function CheckValidPokemonId() {
     }
 }
 
+function readonly( isWritable:boolean = true):Function{
+    return function( target:any, propertyKey:string ){
+        const descriptor:PropertyDescriptor = {
+            get(){
+                // console.log( this );
+                return 'daniel'
+            },
+            set( this, val ){
+                // console.log( this, val );
+                Object.defineProperty( this, propertyKey, {
+                    value:val,
+                    writable:!isWritable,
+                    enumerable:true
+                })
+            }
+        }
 
+        return descriptor
+    }
+}
 
 
 
 @bloquearPrototipo
 @printToConsoleConditional( false )
 export class Pokemon {
+
+    @readonly()
     public publicApi:string = 'https://pokeapi.co'
+
     public name:string
 
     constructor( name:string ){
