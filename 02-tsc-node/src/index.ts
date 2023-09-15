@@ -5,4 +5,4 @@ const charmander = new Pokemon('charmander');
 // (Pokemon.prototype as any).customName = 'pikachu';
 
 
-console.log( charmander );
+charmander.savePokemonToBD(1000);
